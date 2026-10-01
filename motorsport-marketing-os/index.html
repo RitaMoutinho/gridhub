@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f4f7fb" />
+  <title>GridHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="demo-gate" id="demoGate">
+    <div class="demo-card">
+      <div class="demo-brand"><div class="brand-mark"><i></i><i></i></div><div><strong>GRID</strong><span>HUB</span></div></div>
+      <span class="demo-badge">DEMONSTRAÇÃO DE PORTFÓLIO</span>
+      <h1>Central de marketing para equipes de automobilismo</h1>
+      <p>O GridHub é uma demonstração interativa: não é um produto em produção nem está ligado a uma equipe real. Todos os patrocinadores, tarefas e números abaixo são fictícios e servem para mostrar como o fluxo de trabalho funcionaria no dia a dia de uma equipe.</p>
+      <ul class="demo-points">
+        <li>Crie tarefas, patrocinadores e conteúdos reais nesta sessão: tudo fica salvo no seu navegador.</li>
+        <li>Troque entre as etapas da temporada para ver como o painel se adapta a cada corrida.</li>
+        <li>Envie arquivos de verdade (fotos, vídeos, documentos) para a biblioteca de ativos.</li>
+      </ul>
+      <button class="primary-btn" id="enterDemo">Entrar na demonstração</button>
+    </div>
+  </div>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-grid" viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4m0 1c5-3 9 3 14 0v9c-5 3-9-3-14 0"/></symbol>
+    <symbol id="i-handshake" viewBox="0 0 24 24"><path d="M8.5 12.5 11 15a2 2 0 0 0 2.8 0l3.7-3.7M2 9l4-4 4 4-4 4zm20 0-4-4-4 4 4 4zM8 7l2-2h4l2 2M6 13l5 5a2 2 0 0 0 2.8 0l4.2-4.2"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M5 3v3M19 3v3M4 8h16M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10m6 10V4m6 16v-7m4 7H2"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6h7l2 2h9v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-report" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 13h6M9 17h6M9 9h2"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4m0 0-4 4m4-4 4 4M4 15v5h16v-5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v12m0 0 4-4m-4 4-4-4M4 19v1h16v-1"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20c0-4 2.5-6 6-6s6 2 6 6M14 15c4 0 7 1.5 7 5"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M4 6h14a2 2 0 0 1 2 2v10H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 0V4h12v2M15 11h5v4h-5z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="2.5"/></symbol>
+  </svg>
+
+  <div class="app" id="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark"><i></i><i></i></div>
+        <div><strong>GRID</strong><span>HUB</span></div>
+      </div>
+
+      <div class="team-switcher">
+        <div class="team-logo">V</div>
+        <div class="team-meta"><small>EQUIPE ATIVA</small><strong>Volt Racing</strong></div>
+        <button class="ghost-icon" aria-label="Mais opções"><svg><use href="#i-more"/></svg></button>
+      </div>
+
+      <nav class="nav" aria-label="Navegação">
+        <p>VISÃO GERAL</p>
+        <button class="nav-item active" data-view="dashboard"><svg><use href="#i-grid"/></svg><span>Dashboard</span></button>
+        <button class="nav-item" data-view="weekend"><svg><use href="#i-flag"/></svg><span>Race Weekend</span><b id="weekendBadge">7</b></button>
+        <button class="nav-item" data-view="sponsors"><svg><use href="#i-handshake"/></svg><span>Patrocinadores</span></button>
+        <button class="nav-item" data-view="planner"><svg><use href="#i-calendar"/></svg><span>Content Planner</span></button>
+        <button class="nav-item" data-view="analytics"><svg><use href="#i-chart"/></svg><span>Analytics</span></button>
+        <p>RECURSOS</p>
+        <button class="nav-item" data-view="assets"><svg><use href="#i-folder"/></svg><span>Asset Library</span></button>
+        <button class="nav-item" data-view="reports"><svg><use href="#i-report"/></svg><span>Relatórios</span></button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="capacity"><div><span>Storage</span><b>64%</b></div><div class="bar"><i style="width:64%"></i></div><small>6,4 GB de 10 GB</small></div>
+        <button class="user-card" data-view="profile"><span class="avatar">MS</span><span><strong>Maria Silva</strong><small>Marketing Manager • conta demo</small></span><svg><use href="#i-more"/></svg></button>
+      </div>
+    </aside>
+
+    <header class="topbar">
+      <button class="mobile-menu" id="mobileMenu" aria-label="Abrir menu"><svg><use href="#i-menu"/></svg></button>
+      <div class="search-wrap"><svg><use href="#i-search"/></svg><input id="globalSearch" type="search" placeholder="Buscar campanhas, parceiros, ativos..." /></div>
+      <div class="top-actions">
+        <div class="event-chip"><span class="live-dot"></span><span><small>ETAPA ATIVA</small><select id="raceSwitcher" aria-label="Trocar etapa da temporada"></select></span></div>
+        <button class="icon-action" id="notifBtn" aria-label="Notificações"><svg><use href="#i-bell"/></svg><i>3</i></button>
+        <button class="primary-action" id="quickCreate"><svg><use href="#i-plus"/></svg>Novo</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="view active" id="view-dashboard">
+        <div class="page-title-row">
+          <div><p class="eyebrow">TEMPORADA 2026</p><h1>Bom dia, Maria.</h1><p class="subcopy">Aqui está o que precisa da sua atenção antes do GP de <span id="homeRaceName">Melbourne</span>.</p></div>
+          <div class="page-actions"><button class="secondary-btn" data-view="reports"><svg><use href="#i-report"/></svg>Ver relatório</button><button class="primary-btn" id="dashboardTaskBtn"><svg><use href="#i-plus"/></svg>Nova tarefa</button></div>
+        </div>
+
+        <section class="race-hero">
+          <div class="race-copy">
+            <span class="tag" id="heroRound">RACE WEEK 03</span>
+            <h2 id="heroRaceName">Melbourne</h2>
+            <p id="heroCircuit">Albert Park Circuit • 14–16 de março</p>
+            <div class="race-progress"><span><b id="heroTasksDone">11</b>/<span id="heroTasksTotal">18</span> entregas concluídas</span><div class="bar"><i id="heroProgress" style="width:61%"></i></div></div>
+            <div class="race-actions"><button class="primary-light" data-view="weekend">Abrir Race Weekend <svg><use href="#i-arrow"/></svg></button><button class="text-btn" data-view="planner">Ver calendário</button></div>
+          </div>
+          <div class="race-visual">
+            <img class="race-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/2026-08-23_Motorsport,_Gro%C3%9Fer_Preis_der_Niederlande_2026,_F1_Academy_STP_2790.jpg" alt="Carro da F1 Academy em pista de corrida" />
+            <div class="race-number" id="heroRaceNumber">03</div>
+            <p>VOLT RACING</p>
+          </div>
+        </section>
+
+        <div class="kpi-grid">
+          <article class="kpi-card"><div class="kpi-head"><span class="metric-icon blue"><svg><use href="#i-eye"/></svg></span><small>ALCANCE TOTAL</small></div><strong>2,84M</strong><p><b class="up">↑ 18,4%</b> vs. etapa anterior</p></article>
+          <article class="kpi-card"><div class="kpi-head"><span class="metric-icon purple"><svg><use href="#i-users"/></svg></span><small>ENGAJAMENTO</small></div><strong>8,7%</strong><p><b class="up">↑ 1,2 pp</b> vs. etapa anterior</p></article>
+          <article class="kpi-card"><div class="kpi-head"><span class="metric-icon green"><svg><use href="#i-handshake"/></svg></span><small>ENTREGAS DE SPONSOR</small></div><strong id="sponsorDeliveryKpi">84%</strong><p><b>32 de 38</b> entregas cumpridas</p></article>
+          <article class="kpi-card"><div class="kpi-head"><span class="metric-icon gold"><svg><use href="#i-wallet"/></svg></span><small>BUDGET DISPONÍVEL</small></div><strong>R$ 42,5K</strong><p><b>R$ 17,5K</b> comprometidos</p></article>
+        </div>
+
+        <div class="dashboard-grid">
+          <section class="panel span-7">
+            <div class="panel-head"><div><small>PRÓXIMAS ENTREGAS</small><h3>Prioridades da semana</h3></div><button class="link-btn" data-view="weekend">Ver todas</button></div>
+            <div class="task-list" id="dashboardTaskList"></div>
+          </section>
+
+          <section class="panel span-5">
+            <div class="panel-head"><div><small>PATROCINADORES</small><h3>Entregas por parceiro</h3></div><button class="link-btn" data-view="sponsors">Gerenciar</button></div>
+            <div class="sponsor-mini-list" id="sponsorMiniList"></div>
+          </section>
+
+          <section class="panel span-8">
+            <div class="panel-head"><div><small>PERFORMANCE DIGITAL</small><h3>Alcance por etapa</h3></div><select id="metricSelect"><option value="reach">Alcance</option><option value="engagement">Engajamento</option></select></div>
+            <div class="chart-wrap"><canvas id="performanceChart" width="900" height="280" aria-label="Gráfico de performance"></canvas></div>
+          </section>
+
+          <section class="panel span-4">
+            <div class="panel-head"><div><small>CONTEÚDO</small><h3>Top formatos</h3></div></div>
+            <div class="format-list">
+              <div><span>01</span><div><strong>Reels de bastidores</strong><small>12 publicações</small></div><b>11,8%</b></div>
+              <div><span>02</span><div><strong>Race reactions</strong><small>8 publicações</small></div><b>9,6%</b></div>
+              <div><span>03</span><div><strong>Carrossel técnico</strong><small>6 publicações</small></div><b>7,3%</b></div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="view" id="view-weekend">
+        <div class="page-title-row"><div><p class="eyebrow" id="weekendEyebrow">GP DE MELBOURNE</p><h1>Race Weekend</h1><p class="subcopy">Planeje e acompanhe todas as entregas de marketing da etapa.</p></div><button class="primary-btn" id="addTaskBtn"><svg><use href="#i-plus"/></svg>Adicionar tarefa</button></div>
+        <div class="weekend-headline panel">
+          <div><span class="tag dark" id="weekendDateTag">SEX • 14 MAR</span><h3>Briefing de sexta-feira</h3><p>Objetivo: amplificar bastidores, preparar conteúdo de quali e garantir as entregas de parceiros.</p></div>
+          <div class="progress-ring" id="weekendRing"><span><b id="weekendPct">61%</b><small>concluído</small></span></div>
+        </div>
+        <div class="kanban" id="weekendBoard"></div>
+      </section>
+
+      <section class="view" id="view-sponsors">
+        <div class="page-title-row"><div><p class="eyebrow">COMERCIAL</p><h1>Patrocinadores</h1><p class="subcopy">Acompanhe contratos, entregas, exposição e relacionamento com cada marca.</p></div><button class="primary-btn" id="addSponsorBtn"><svg><use href="#i-plus"/></svg>Novo patrocinador</button></div>
+        <div class="sponsor-kpis">
+          <div class="compact-stat"><small>VALOR CONTRATADO</small><strong>R$ 1,28M</strong><span>Temporada 2026</span></div>
+          <div class="compact-stat"><small>ENTREGAS CUMPRIDAS</small><strong id="deliveryPercent">84%</strong><span id="deliveryLabel">32 de 38</span></div>
+          <div class="compact-stat"><small>RENOVAÇÕES EM ABERTO</small><strong>2</strong><span>Próximos 45 dias</span></div>
+          <div class="compact-stat"><small>MEDIA VALUE</small><strong>R$ 2,1M</strong><span>Estimativa acumulada</span></div>
+        </div>
+        <div class="sponsor-grid" id="sponsorGrid"></div>
+      </section>
+
+      <section class="view" id="view-planner">
+        <div class="page-title-row"><div><p class="eyebrow">CONTEÚDO</p><h1>Content Planner</h1><p class="subcopy">Organize publicações, canais, responsáveis e aprovações durante a etapa.</p></div><button class="primary-btn" id="addContentBtn"><svg><use href="#i-plus"/></svg>Novo conteúdo</button></div>
+        <div class="planner-toolbar panel"><div class="date-switch"><button id="prevDay">‹</button><strong id="plannerDate">SEXTA, 14 MAR</strong><button id="nextDay">›</button></div><div class="filters" id="plannerFilters"><button class="active" data-filter="all">Todos</button><button data-filter="Instagram">Instagram</button><button data-filter="TikTok">TikTok</button><button data-filter="YouTube">YouTube</button><button data-filter="Imprensa">Imprensa</button></div></div>
+        <div class="planner-list" id="plannerList"></div>
+      </section>
+
+      <section class="view" id="view-analytics">
+        <div class="page-title-row"><div><p class="eyebrow">PERFORMANCE</p><h1>Analytics</h1><p class="subcopy">Entenda o que está gerando alcance, engajamento e valor para os parceiros.</p></div><button class="secondary-btn" id="exportAnalytics"><svg><use href="#i-download"/></svg>Exportar CSV</button></div>
+        <div class="analytics-grid">
+          <section class="panel analytics-main"><div class="panel-head"><div><small>TENDÊNCIA</small><h3>Performance por etapa</h3></div><select id="analyticsMetric"><option value="reach">Alcance</option><option value="followers">Novos seguidores</option><option value="engagement">Engajamento</option></select></div><div class="chart-wrap tall"><canvas id="analyticsChart" width="1000" height="360"></canvas></div></section>
+          <section class="panel"><div class="panel-head"><div><small>CANAIS</small><h3>Distribuição de alcance</h3></div></div><div class="donut-wrap"><div class="donut" id="channelDonut"><span><b>2,84M</b><small>alcance</small></span></div><div class="legend"><div><i class="ig"></i>Instagram <b>52%</b></div><div><i class="tt"></i>TikTok <b>31%</b></div><div><i class="yt"></i>YouTube <b>17%</b></div></div></div></section>
+          <section class="panel"><div class="panel-head"><div><small>INSIGHTS</small><h3>O que está funcionando</h3></div></div><div class="insight-list"><article><span>01</span><div><strong>Bastidores + rosto da pilota</strong><p>Geram 2,3× mais comentários que artes estáticas.</p></div></article><article><span>02</span><div><strong>Publicações até 20 min pós-sessão</strong><p>Recebem 41% mais alcance orgânico.</p></div></article><article><span>03</span><div><strong>Integração natural de marca</strong><p>Retém melhor a audiência que posts promocionais isolados.</p></div></article></div></section>
+          <section class="panel"><div class="panel-head"><div><small>CONTEÚDO</small><h3>Melhores publicações</h3></div></div><div class="top-posts"><div class="post-thumb p1"></div><div><strong>“Dentro do box antes do quali”</strong><small>Reels • 486K alcance • 13,2% eng.</small></div></div><div class="top-posts"><div class="post-thumb p2"></div><div><strong>“3 decisões em 30 segundos”</strong><small>TikTok • 391K alcance • 11,4% eng.</small></div></div></section>
+        </div>
+      </section>
+
+      <section class="view" id="view-assets">
+        <div class="page-title-row"><div><p class="eyebrow">ARQUIVOS</p><h1>Asset Library</h1><p class="subcopy">Centralize fotos, vídeos, logos, documentos e materiais oficiais da equipe.</p></div><button class="primary-btn" id="uploadAssetBtn"><svg><use href="#i-upload"/></svg>Adicionar ativo</button></div>
+        <div class="asset-toolbar panel"><div class="search-wrap small"><svg><use href="#i-search"/></svg><input id="assetSearch" placeholder="Buscar arquivo..." /></div><div class="filters" id="assetFilters"><button class="active" data-filter="all">Todos</button><button data-filter="Foto">Fotos</button><button data-filter="Vídeo">Vídeos</button><button data-filter="Logo">Logos</button><button data-filter="Documento">Documentos</button></div></div>
+        <div class="asset-grid" id="assetGrid"></div>
+      </section>
+
+      <section class="view" id="view-reports">
+        <div class="page-title-row"><div><h1>Relatórios</h1><p class="subcopy">Transforme a etapa em uma entrega clara para diretoria e patrocinadores.</p></div><button class="primary-btn" id="generateReportBtn"><svg><use href="#i-plus"/></svg>Gerar relatório</button></div>
+        <section class="report-feature panel"><div><span class="tag">Modelo recomendado</span><h2 id="reportFeatureTitle">Relatório de marketing do GP de Melbourne</h2><p>Resumo executivo com performance digital, entregas de patrocinadores, conteúdos de destaque e próximos passos.</p><div class="report-meta"><span>12 páginas</span><span>Atualizado há 8 min</span><span>PDF / apresentação</span></div><button class="primary-btn" id="openLatestReport">Abrir relatório</button></div><div class="report-preview"><i></i><i></i><i></i><strong>VOLT RACING</strong><small id="reportFeatureRound">RACE WEEK 03</small></div></section>
+        <div class="report-list" id="reportList"></div>
+      </section>
+
+      <section class="view" id="view-profile">
+        <div class="page-title-row"><div><h1>Maria Silva</h1><p class="subcopy">Marketing Manager • Volt Racing <span class="demo-tag">conta demo</span></p></div></div>
+        <div class="profile-layout">
+          <section class="panel profile-card"><div class="profile-avatar">MS</div><h3>Maria Silva</h3><p>Marketing Manager</p><div class="profile-tags"><span>Brand Strategy</span><span>Social Media</span><span>Data</span><span>Sponsorship</span></div></section>
+          <section class="panel"><div class="panel-head"><div><small>SEU PAINEL</small><h3>Responsabilidades atuais</h3></div></div><div class="responsibility-list"><div><span>Campanhas ativas</span><b>4</b></div><div><span>Patrocinadores sob gestão</span><b id="profileSponsors">4</b></div><div><span>Entregas nesta etapa</span><b>18</b></div><div><span>Aprovações pendentes</span><b>3</b></div></div></section>
+        </div>
+      </section>
+    </main>
+
+    <aside class="notification-panel" id="notificationPanel" aria-hidden="true">
+      <div class="notification-head"><div><small>ATUALIZAÇÕES</small><h3>Notificações</h3></div><button id="closeNotifications"><svg><use href="#i-x"/></svg></button></div>
+      <div class="notification-list">
+        <article class="unread"><span class="n-dot"></span><div><strong>PULSE aprovou o Reels de bastidores</strong><p>O conteúdo já pode ser publicado.</p><small>Há 6 min</small></div></article>
+        <article class="unread"><span class="n-dot"></span><div><strong>Entrega NEXA vence hoje</strong><p>Foto do logo no carro + menção no Instagram.</p><small>Há 28 min</small></div></article>
+        <article class="unread"><span class="n-dot"></span><div><strong>Seu relatório semanal está pronto</strong><p>Performance acumulada após Jeddah.</p><small>Há 1 h</small></div></article>
+      </div>
+    </aside>
+
+    <div class="scrim" id="scrim"></div>
+
+    <div class="modal" id="taskModal" aria-hidden="true">
+      <div class="modal-card"><div class="modal-head"><div><small>NOVA TAREFA</small><h3>Adicionar entrega</h3></div><button data-close-modal><svg><use href="#i-x"/></svg></button></div><form id="taskForm"><label>Título<input name="title" required placeholder="Ex.: Publicar bastidores do FP1"></label><div class="form-grid"><label>Etapa<select name="race" id="taskRaceField"></select></label><label>Dia<select name="day"><option>Sexta</option><option>Sábado</option><option>Domingo</option></select></label></div><div class="form-grid"><label>Responsável<select name="owner"><option>Maria</option><option>Bia</option><option>Lucas</option><option>Caio</option></select></label><label>Categoria<select name="category"><option>Conteúdo</option><option>Patrocínio</option><option>Imprensa</option><option>Evento</option></select></label></div><label>Horário<input name="time" type="time" value="14:00"></label><button class="primary-btn" type="submit">Adicionar tarefa</button></form></div>
+    </div>
+
+    <div class="modal" id="sponsorModal" aria-hidden="true">
+      <div class="modal-card"><div class="modal-head"><div><small>NOVO PARCEIRO</small><h3>Cadastrar patrocinador</h3></div><button data-close-modal><svg><use href="#i-x"/></svg></button></div><form id="sponsorForm"><label>Marca<input name="name" required placeholder="Ex.: Apex Energy"></label><div class="form-grid"><label>Valor do contrato<input name="value" required type="number" min="0" placeholder="150000"></label><label>Entregas previstas<input name="deliveries" required type="number" min="1" value="8"></label></div><label>Categoria<select name="tier"><option>Principal</option><option>Oficial</option><option>Parceiro técnico</option></select></label><button class="primary-btn" type="submit">Cadastrar patrocinador</button></form></div>
+    </div>
+
+    <div class="modal" id="contentModal" aria-hidden="true">
+      <div class="modal-card"><div class="modal-head"><div><small>NOVO CONTEÚDO</small><h3>Planejar publicação</h3></div><button data-close-modal><svg><use href="#i-x"/></svg></button></div><form id="contentForm"><label>Título<input name="title" required placeholder="Ex.: Reels pós-classificação"></label><div class="form-grid"><label>Canal<select name="channel"><option>Instagram</option><option>TikTok</option><option>YouTube</option><option>Imprensa</option></select></label><label>Horário<input name="time" type="time" value="16:30"></label></div><label>Status<select name="status"><option>Planejado</option><option>Em produção</option><option>Aguardando aprovação</option><option>Aprovado</option></select></label><button class="primary-btn" type="submit">Adicionar ao planner</button></form></div>
+    </div>
+
+    <div class="modal report-modal" id="reportModal" aria-hidden="true">
+      <div class="modal-card wide"><div class="modal-head"><div><small>RELATÓRIO GERADO</small><h3 id="reportModalTitle">Relatório de marketing do GP de Melbourne</h3></div><button data-close-modal><svg><use href="#i-x"/></svg></button></div><div class="report-output" id="reportOutput"></div><div class="modal-actions"><button class="secondary-btn" id="downloadReport"><svg><use href="#i-download"/></svg>Baixar resumo</button><button class="primary-btn" data-close-modal>Concluir</button></div></div>
+    </div>
+
+    <div class="modal" id="assetModal" aria-hidden="true">
+      <div class="modal-card"><div class="modal-head"><div><small>NOVO ATIVO</small><h3>Adicionar à biblioteca</h3></div><button data-close-modal><svg><use href="#i-x"/></svg></button></div>
+        <form id="assetForm">
+          <label>Arquivo
+            <div class="file-drop" id="fileDrop">
+              <input name="file" id="assetFile" type="file" accept="image/*,video/*,.pdf,.doc,.docx,.ppt,.pptx,.key,.svg">
+              <span id="fileDropLabel">Clique para escolher fotos, vídeos ou documentos do seu computador</span>
+            </div>
+          </label>
+          <label>Nome do arquivo<input name="name" id="assetNameField" required placeholder="Ex.: hero_melbourne_01.jpg"></label>
+          <div class="form-grid"><label>Tipo<select name="type" id="assetTypeField"><option>Foto</option><option>Vídeo</option><option>Logo</option><option>Documento</option></select></label><label>Tag<input name="tag" placeholder="Melbourne"></label></div>
+          <button class="primary-btn" type="submit">Adicionar ativo</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="chart-tooltip" id="chartTooltip"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
